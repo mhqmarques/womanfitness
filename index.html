@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+  <title>Woman Fitness</title>
+  <meta charset="UTF-8">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+
+  <div class="modal">
+    <div class="modal_content">
+      <img src="img/01.jpg" id="modal_img">
+    </div>
+    <span id="btn_fechar">&times;</span>
+  </div>
+
+  <header>
+    <div class="center">
+      <div class="logo">
+        <h2>Woman Fitness</h2>
+      </div>
+      <!--logo-->
+      <div class="menu">
+        <a href="#sobre">
+          Sobre
+        </a>
+        <a href="#galeria">
+          Galeria
+        </a>
+        <a href="#contatos">
+          Contato
+        </a>
+        <a class="btnMenu" href="#">
+          Loja Virtual
+        </a>
+      </div>
+      <!--menu-->
+    </div>
+  </header>
+  <main>
+    <div class="center">
+      <div class="mainBanner"></div>
+    </div>
+  </main>
+  <section id="sobre">
+    <div class="center">
+      <div class="sobre">
+        <h2>Um pouco sobre nós!!</h2>
+        <div id="textoSobre">
+          <p>
+            A Woman Fitness é para você que valoriza sua saúde, conforto e que busca sempre ficar
+            linda em qualquer ocasião, principalmente na hora de malhar e praticar esportes.
+            Nós separamos peças incríveis para que você realce ainda mais a
+            sua beleza e vista sua melhor versão conosco. Aproveite!
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="galeria">
+    <h2>Conheça alguns dos nossos produtos!!!</h2>
+    <div class="container">
+      <div class="row">
+        <div class="card_img">
+          <img src="img/01.jpeg" class="small_img">
+        </div>
+        <div class="card_img">
+          <img src="img/02.jpeg" class="small_img">
+        </div>
+        <div class="card_img">
+          <img src="img/03.jpeg" class="small_img">
+        </div>
+        <div class="row">
+          <div class="card_img">
+            <img src="img/04.jpeg" class="small_img">
+          </div>
+          <div class="card_img">
+            <img src="img/05.jpeg" class="small_img">
+          </div>
+          <div class="card_img">
+            <img src="img/06.jpeg" class="small_img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="loja">
+    <div>
+      <h2>Gostou?? Quer mais ???</h2>
+      <h3>Corre em nossa loja !!!</h3>
+    </div>
+    <a class="btnMenu" href="#">
+      <p>Loja Virtual</p>
+    </a>
+  </section>
+
+  <footer>
+    <div>
+      <h2>Entre em contato conosco !!!</h2>
+      <h3>Será um prazer atendê-lo !!!</h3>
+    </div>
+    <section class="contact_list" id="contatos">
+      <div class="contact">
+        <a href="https://www.instagram.com/womanfit_of/" target="_blank"><img src="./img/instagram.png"
+            alt="Ícone instagram"></a>
+      </div>
+      <div class="contact">
+        <a href="tel:+5531986131547"><img src="./img/whatsapp.png" alt="Ícone de um whatsapp"></a>
+      </div>
+      <div class="contact">
+        <a href="mailto:mhqmarques@gmail.com"><img src="./img/gmail.png" alt="Ícone Gmail"></a>
+      </div>
+    </section>
+    <p>icons by Icons8</p>
+  </footer>
+
+  <script src="https://kit.fontawesome.com/940e68e46e.js" crossorigin="anonymous"></script>
+  <script>
+    let imagens = document.querySelectorAll('.small_img')
+    let modal = document.querySelector('.modal')
+    let modalImg = document.querySelector('#modal_img')
+    let btnFechar = document.querySelector('#btn_fechar')
+    let srcVal = ''
+
+    for (let i = 0; i < imagens.length; ++i) {
+      imagens[i].addEventListener('click', function () {
+        srcVal = imagens[i].getAttribute('src')
+        modalImg.setAttribute('src', srcVal)
+        modal.classList.toggle('modal_active')
+      })
+    }
+
+    btnFechar.addEventListener('click', function () {
+      modal.classList.toggle('modal_active')
+    })
+
+  </script>
+</body>
+
+</html>
